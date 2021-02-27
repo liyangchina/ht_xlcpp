@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		969FB46B25CA83CA00828217 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB46A25CA83CA00828217 /* main.cpp */; };
+		969FB4D725CA8AC400828217 /* Linux_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB49E25CA8ABD00828217 /* Linux_Win.cpp */; };
+		969FB4D825CA8AC400828217 /* cws.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4A125CA8ABD00828217 /* cws.cpp */; };
+		969FB4D925CA8AC400828217 /* STRING_Helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4A325CA8ABD00828217 /* STRING_Helper.cpp */; };
+		969FB4DA25CA8AC400828217 /* AvartarSortObj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4A425CA8ABE00828217 /* AvartarSortObj.cpp */; };
+		969FB4DB25CA8AC400828217 /* FileQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4A725CA8ABE00828217 /* FileQueue.cpp */; };
+		969FB4DC25CA8AC400828217 /* XmlBinProcess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4AB25CA8ABE00828217 /* XmlBinProcess.cpp */; };
+		969FB4DD25CA8AC400828217 /* ParseBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4AE25CA8ABE00828217 /* ParseBase.cpp */; };
+		969FB4DE25CA8AC400828217 /* ParseObj.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4B025CA8ABE00828217 /* ParseObj.cpp */; };
+		969FB4DF25CA8AC400828217 /* sha1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4B125CA8ABE00828217 /* sha1.cpp */; };
+		969FB4E025CA8AC400828217 /* ThirdQQ.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4B325CA8ABF00828217 /* ThirdQQ.cpp */; };
+		969FB4E125CA8AC400828217 /* AvartarDB_Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4B425CA8ABF00828217 /* AvartarDB_Action.cpp */; };
+		969FB4E225CA8AC400828217 /* ParseProcess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4B725CA8ABF00828217 /* ParseProcess.cpp */; };
+		969FB4E325CA8AC400828217 /* ByteBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4BA25CA8ABF00828217 /* ByteBase.cpp */; };
+		969FB4E425CA8AC400828217 /* ConnQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4BB25CA8AC000828217 /* ConnQueue.cpp */; };
+		969FB4E525CA8AC400828217 /* XML_Mini.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4BC25CA8AC000828217 /* XML_Mini.cpp */; };
+		969FB4E625CA8AC400828217 /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4C025CA8AC000828217 /* stdafx.cpp */; };
+		969FB4E725CA8AC400828217 /* ConnSSL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4C125CA8AC100828217 /* ConnSSL.cpp */; };
+		969FB4E825CA8AC400828217 /* WizBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4C225CA8AC100828217 /* WizBase.cpp */; };
+		969FB4E925CA8AC400828217 /* CDebug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4C425CA8AC100828217 /* CDebug.cpp */; };
+		969FB4EA25CA8AC400828217 /* AvartarDBManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4C525CA8AC100828217 /* AvartarDBManager.cpp */; };
+		969FB4EB25CA8AC400828217 /* ObjectProcess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4C725CA8AC200828217 /* ObjectProcess.cpp */; };
+		969FB4EC25CA8AC400828217 /* AvartarDB_Base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4C825CA8AC200828217 /* AvartarDB_Base.cpp */; };
+		969FB4ED25CA8AC400828217 /* pugixml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4CA25CA8AC200828217 /* pugixml.cpp */; };
+		969FB4EE25CA8AC400828217 /* HTTP_Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4CD25CA8AC200828217 /* HTTP_Config.cpp */; };
+		969FB4EF25CA8AC400828217 /* ParseXml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4CE25CA8AC200828217 /* ParseXml.cpp */; };
+		969FB4F025CA8AC400828217 /* ParseExternal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4CF25CA8AC300828217 /* ParseExternal.cpp */; };
+		969FB4F125CA8AC400828217 /* ThirdBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4D025CA8AC300828217 /* ThirdBase.cpp */; };
+		969FB4F225CA8AC400828217 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 969FB4D625CA8AC300828217 /* base64.cpp */; };
+		969FB4F525CA8BFB00828217 /* libevent_core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 969FB49725CA87B700828217 /* libevent_core.a */; };
+		969FB4F625CA8BFB00828217 /* libevent_extra.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 969FB49825CA87B700828217 /* libevent_extra.a */; };
+		969FB4F725CA8BFB00828217 /* libevent_openssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 969FB49925CA87B700828217 /* libevent_openssl.a */; };
+		969FB4F825CA8BFB00828217 /* libevent_pthreads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 969FB49A25CA87B700828217 /* libevent_pthreads.a */; };
+		969FB4F925CA8BFB00828217 /* libevent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 969FB49625CA87B700828217 /* libevent.a */; };
+		969FB4FA25CA8BFB00828217 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 969FB49B25CA87B700828217 /* libssl.a */; };
+		969FB4FC25CA8C1300828217 /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 969FB4FB25CA8C1300828217 /* libiconv.2.4.0.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		969FB46525CA83CA00828217 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		969FB46725CA83CA00828217 /* ht_xlcpp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ht_xlcpp; sourceTree = BUILT_PRODUCTS_DIR; };
+		969FB46A25CA83CA00828217 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		969FB47325CA87AE00828217 /* evdns.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = evdns.h; sourceTree = "<group>"; };
+		969FB47425CA87AE00828217 /* event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = "<group>"; };
+		969FB47625CA87AE00828217 /* buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		969FB47725CA87AE00828217 /* buffer_compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = buffer_compat.h; sourceTree = "<group>"; };
+		969FB47825CA87AE00828217 /* bufferevent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bufferevent.h; sourceTree = "<group>"; };
+		969FB47925CA87AE00828217 /* bufferevent_compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bufferevent_compat.h; sourceTree = "<group>"; };
+		969FB47A25CA87AE00828217 /* bufferevent_ssl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bufferevent_ssl.h; sourceTree = "<group>"; };
+		969FB47B25CA87AE00828217 /* bufferevent_struct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bufferevent_struct.h; sourceTree = "<group>"; };
+		969FB47C25CA87AE00828217 /* dns.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dns.h; sourceTree = "<group>"; };
+		969FB47D25CA87AE00828217 /* dns_compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dns_compat.h; sourceTree = "<group>"; };
+		969FB47E25CA87AE00828217 /* dns_struct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dns_struct.h; sourceTree = "<group>"; };
+		969FB47F25CA87AE00828217 /* event-config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "event-config.h"; sourceTree = "<group>"; };
+		969FB48025CA87AE00828217 /* event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = "<group>"; };
+		969FB48125CA87AE00828217 /* event_compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = event_compat.h; sourceTree = "<group>"; };
+		969FB48225CA87AE00828217 /* event_struct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = event_struct.h; sourceTree = "<group>"; };
+		969FB48325CA87AE00828217 /* http.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = http.h; sourceTree = "<group>"; };
+		969FB48425CA87AE00828217 /* http_compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = http_compat.h; sourceTree = "<group>"; };
+		969FB48525CA87AE00828217 /* http_struct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = http_struct.h; sourceTree = "<group>"; };
+		969FB48625CA87AE00828217 /* keyvalq_struct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = keyvalq_struct.h; sourceTree = "<group>"; };
+		969FB48725CA87AE00828217 /* listener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = listener.h; sourceTree = "<group>"; };
+		969FB48825CA87AE00828217 /* rpc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rpc.h; sourceTree = "<group>"; };
+		969FB48925CA87AE00828217 /* rpc_compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rpc_compat.h; sourceTree = "<group>"; };
+		969FB48A25CA87AE00828217 /* rpc_struct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rpc_struct.h; sourceTree = "<group>"; };
+		969FB48B25CA87AE00828217 /* tag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tag.h; sourceTree = "<group>"; };
+		969FB48C25CA87AE00828217 /* tag_compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tag_compat.h; sourceTree = "<group>"; };
+		969FB48D25CA87AE00828217 /* thread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = thread.h; sourceTree = "<group>"; };
+		969FB48E25CA87AE00828217 /* util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		969FB48F25CA87AE00828217 /* visibility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = visibility.h; sourceTree = "<group>"; };
+		969FB49025CA87AE00828217 /* evhttp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = evhttp.h; sourceTree = "<group>"; };
+		969FB49125CA87AE00828217 /* evrpc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = evrpc.h; sourceTree = "<group>"; };
+		969FB49225CA87AE00828217 /* evutil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = evutil.h; sourceTree = "<group>"; };
+		969FB49525CA87B700828217 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		969FB49625CA87B700828217 /* libevent.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libevent.a; sourceTree = "<group>"; };
+		969FB49725CA87B700828217 /* libevent_core.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libevent_core.a; sourceTree = "<group>"; };
+		969FB49825CA87B700828217 /* libevent_extra.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libevent_extra.a; sourceTree = "<group>"; };
+		969FB49925CA87B700828217 /* libevent_openssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libevent_openssl.a; sourceTree = "<group>"; };
+		969FB49A25CA87B700828217 /* libevent_pthreads.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libevent_pthreads.a; sourceTree = "<group>"; };
+		969FB49B25CA87B700828217 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		969FB49D25CA8ABD00828217 /* ConnSSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnSSL.h; path = src/ConnSSL.h; sourceTree = SOURCE_ROOT; };
+		969FB49E25CA8ABD00828217 /* Linux_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Linux_Win.cpp; path = src/Linux_Win.cpp; sourceTree = SOURCE_ROOT; };
+		969FB49F25CA8ABD00828217 /* pugiconfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = pugiconfig.hpp; path = src/pugiconfig.hpp; sourceTree = SOURCE_ROOT; };
+		969FB4A025CA8ABD00828217 /* STRING_Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STRING_Helper.h; path = src/STRING_Helper.h; sourceTree = SOURCE_ROOT; };
+		969FB4A125CA8ABD00828217 /* cws.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cws.cpp; path = src/cws.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4A225CA8ABD00828217 /* ParseProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseProcess.h; path = src/ParseProcess.h; sourceTree = SOURCE_ROOT; };
+		969FB4A325CA8ABD00828217 /* STRING_Helper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = STRING_Helper.cpp; path = src/STRING_Helper.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4A425CA8ABE00828217 /* AvartarSortObj.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AvartarSortObj.cpp; path = src/AvartarSortObj.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4A525CA8ABE00828217 /* WizBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WizBase.h; path = src/WizBase.h; sourceTree = SOURCE_ROOT; };
+		969FB4A625CA8ABE00828217 /* HTTP_Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTP_Config.h; path = src/HTTP_Config.h; sourceTree = SOURCE_ROOT; };
+		969FB4A725CA8ABE00828217 /* FileQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileQueue.cpp; path = src/FileQueue.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4A825CA8ABE00828217 /* ThirdBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThirdBase.h; path = src/ThirdBase.h; sourceTree = SOURCE_ROOT; };
+		969FB4A925CA8ABE00828217 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = src/sha1.h; sourceTree = SOURCE_ROOT; };
+		969FB4AA25CA8ABE00828217 /* ParseObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseObj.h; path = src/ParseObj.h; sourceTree = SOURCE_ROOT; };
+		969FB4AB25CA8ABE00828217 /* XmlBinProcess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = XmlBinProcess.cpp; path = src/XmlBinProcess.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4AC25CA8ABE00828217 /* AvartarDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvartarDBManager.h; path = src/AvartarDBManager.h; sourceTree = SOURCE_ROOT; };
+		969FB4AD25CA8ABE00828217 /* XML_Mini.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XML_Mini.h; path = src/XML_Mini.h; sourceTree = SOURCE_ROOT; };
+		969FB4AE25CA8ABE00828217 /* ParseBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ParseBase.cpp; path = src/ParseBase.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4AF25CA8ABE00828217 /* ParseExternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseExternal.h; path = src/ParseExternal.h; sourceTree = SOURCE_ROOT; };
+		969FB4B025CA8ABE00828217 /* ParseObj.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ParseObj.cpp; path = src/ParseObj.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4B125CA8ABE00828217 /* sha1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sha1.cpp; path = src/sha1.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4B225CA8ABE00828217 /* cws.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cws.h; path = src/cws.h; sourceTree = SOURCE_ROOT; };
+		969FB4B325CA8ABF00828217 /* ThirdQQ.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThirdQQ.cpp; path = src/ThirdQQ.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4B425CA8ABF00828217 /* AvartarDB_Action.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AvartarDB_Action.cpp; path = src/AvartarDB_Action.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4B525CA8ABF00828217 /* ConnQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnQueue.h; path = src/ConnQueue.h; sourceTree = SOURCE_ROOT; };
+		969FB4B625CA8ABF00828217 /* pugixml.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = pugixml.hpp; path = src/pugixml.hpp; sourceTree = SOURCE_ROOT; };
+		969FB4B725CA8ABF00828217 /* ParseProcess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ParseProcess.cpp; path = src/ParseProcess.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4B825CA8ABF00828217 /* ObjectProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjectProcess.h; path = src/ObjectProcess.h; sourceTree = SOURCE_ROOT; };
+		969FB4B925CA8ABF00828217 /* AvartarDB_Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvartarDB_Base.h; path = src/AvartarDB_Base.h; sourceTree = SOURCE_ROOT; };
+		969FB4BA25CA8ABF00828217 /* ByteBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ByteBase.cpp; path = src/ByteBase.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4BB25CA8AC000828217 /* ConnQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConnQueue.cpp; path = src/ConnQueue.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4BC25CA8AC000828217 /* XML_Mini.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = XML_Mini.cpp; path = src/XML_Mini.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4BD25CA8AC000828217 /* ByteBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ByteBase.h; path = src/ByteBase.h; sourceTree = SOURCE_ROOT; };
+		969FB4BE25CA8AC000828217 /* AvartarDB_Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvartarDB_Action.h; path = src/AvartarDB_Action.h; sourceTree = SOURCE_ROOT; };
+		969FB4BF25CA8AC000828217 /* ParseXml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseXml.h; path = src/ParseXml.h; sourceTree = SOURCE_ROOT; };
+		969FB4C025CA8AC000828217 /* stdafx.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = stdafx.cpp; path = src/stdafx.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4C125CA8AC100828217 /* ConnSSL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConnSSL.cpp; path = src/ConnSSL.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4C225CA8AC100828217 /* WizBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WizBase.cpp; path = src/WizBase.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4C325CA8AC100828217 /* AvartarSortObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvartarSortObj.h; path = src/AvartarSortObj.h; sourceTree = SOURCE_ROOT; };
+		969FB4C425CA8AC100828217 /* CDebug.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CDebug.cpp; path = src/CDebug.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4C525CA8AC100828217 /* AvartarDBManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AvartarDBManager.cpp; path = src/AvartarDBManager.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4C625CA8AC100828217 /* CDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDebug.h; path = src/CDebug.h; sourceTree = SOURCE_ROOT; };
+		969FB4C725CA8AC200828217 /* ObjectProcess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ObjectProcess.cpp; path = src/ObjectProcess.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4C825CA8AC200828217 /* AvartarDB_Base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AvartarDB_Base.cpp; path = src/AvartarDB_Base.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4C925CA8AC200828217 /* ParseBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParseBase.h; path = src/ParseBase.h; sourceTree = SOURCE_ROOT; };
+		969FB4CA25CA8AC200828217 /* pugixml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = pugixml.cpp; path = src/pugixml.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4CB25CA8AC200828217 /* ParseXml.cold */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ParseXml.cold; path = src/ParseXml.cold; sourceTree = SOURCE_ROOT; };
+		969FB4CC25CA8AC200828217 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base64.h; path = src/base64.h; sourceTree = SOURCE_ROOT; };
+		969FB4CD25CA8AC200828217 /* HTTP_Config.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HTTP_Config.cpp; path = src/HTTP_Config.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4CE25CA8AC200828217 /* ParseXml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ParseXml.cpp; path = src/ParseXml.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4CF25CA8AC300828217 /* ParseExternal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ParseExternal.cpp; path = src/ParseExternal.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4D025CA8AC300828217 /* ThirdBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ThirdBase.cpp; path = src/ThirdBase.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4D125CA8AC300828217 /* Linux_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Linux_Win.h; path = src/Linux_Win.h; sourceTree = SOURCE_ROOT; };
+		969FB4D225CA8AC300828217 /* ThirdQQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ThirdQQ.h; path = src/ThirdQQ.h; sourceTree = SOURCE_ROOT; };
+		969FB4D325CA8AC300828217 /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stdafx.h; path = src/stdafx.h; sourceTree = SOURCE_ROOT; };
+		969FB4D425CA8AC300828217 /* FileQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileQueue.h; path = src/FileQueue.h; sourceTree = SOURCE_ROOT; };
+		969FB4D525CA8AC300828217 /* XmlBinProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XmlBinProcess.h; path = src/XmlBinProcess.h; sourceTree = SOURCE_ROOT; };
+		969FB4D625CA8AC300828217 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = base64.cpp; path = src/base64.cpp; sourceTree = SOURCE_ROOT; };
+		969FB4F325CA8AE100828217 /* HDCCallObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDCCallObj.h; sourceTree = "<group>"; };
+		969FB4FB25CA8C1300828217 /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		969FB46425CA83CA00828217 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969FB4FC25CA8C1300828217 /* libiconv.2.4.0.tbd in Frameworks */,
+				969FB4F525CA8BFB00828217 /* libevent_core.a in Frameworks */,
+				969FB4F625CA8BFB00828217 /* libevent_extra.a in Frameworks */,
+				969FB4F725CA8BFB00828217 /* libevent_openssl.a in Frameworks */,
+				969FB4F825CA8BFB00828217 /* libevent_pthreads.a in Frameworks */,
+				969FB4F925CA8BFB00828217 /* libevent.a in Frameworks */,
+				969FB4FA25CA8BFB00828217 /* libssl.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		969FB45E25CA83CA00828217 = {
+			isa = PBXGroup;
+			children = (
+				969FB49425CA87B700828217 /* lib */,
+				969FB47225CA87AE00828217 /* include */,
+				969FB46925CA83CA00828217 /* WizGW3 */,
+				969FB46825CA83CA00828217 /* Products */,
+				969FB4F425CA8BFB00828217 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		969FB46825CA83CA00828217 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				969FB46725CA83CA00828217 /* ht_xlcpp */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		969FB46925CA83CA00828217 /* WizGW3 */ = {
+			isa = PBXGroup;
+			children = (
+				969FB49C25CA893500828217 /* WizBase */,
+				969FB46A25CA83CA00828217 /* main.cpp */,
+				969FB4F325CA8AE100828217 /* HDCCallObj.h */,
+			);
+			path = WizGW3;
+			sourceTree = "<group>";
+		};
+		969FB47225CA87AE00828217 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				969FB47325CA87AE00828217 /* evdns.h */,
+				969FB47425CA87AE00828217 /* event.h */,
+				969FB47525CA87AE00828217 /* event2 */,
+				969FB49025CA87AE00828217 /* evhttp.h */,
+				969FB49125CA87AE00828217 /* evrpc.h */,
+				969FB49225CA87AE00828217 /* evutil.h */,
+				969FB49325CA87AE00828217 /* openssl */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		969FB47525CA87AE00828217 /* event2 */ = {
+			isa = PBXGroup;
+			children = (
+				969FB47625CA87AE00828217 /* buffer.h */,
+				969FB47725CA87AE00828217 /* buffer_compat.h */,
+				969FB47825CA87AE00828217 /* bufferevent.h */,
+				969FB47925CA87AE00828217 /* bufferevent_compat.h */,
+				969FB47A25CA87AE00828217 /* bufferevent_ssl.h */,
+				969FB47B25CA87AE00828217 /* bufferevent_struct.h */,
+				969FB47C25CA87AE00828217 /* dns.h */,
+				969FB47D25CA87AE00828217 /* dns_compat.h */,
+				969FB47E25CA87AE00828217 /* dns_struct.h */,
+				969FB47F25CA87AE00828217 /* event-config.h */,
+				969FB48025CA87AE00828217 /* event.h */,
+				969FB48125CA87AE00828217 /* event_compat.h */,
+				969FB48225CA87AE00828217 /* event_struct.h */,
+				969FB48325CA87AE00828217 /* http.h */,
+				969FB48425CA87AE00828217 /* http_compat.h */,
+				969FB48525CA87AE00828217 /* http_struct.h */,
+				969FB48625CA87AE00828217 /* keyvalq_struct.h */,
+				969FB48725CA87AE00828217 /* listener.h */,
+				969FB48825CA87AE00828217 /* rpc.h */,
+				969FB48925CA87AE00828217 /* rpc_compat.h */,
+				969FB48A25CA87AE00828217 /* rpc_struct.h */,
+				969FB48B25CA87AE00828217 /* tag.h */,
+				969FB48C25CA87AE00828217 /* tag_compat.h */,
+				969FB48D25CA87AE00828217 /* thread.h */,
+				969FB48E25CA87AE00828217 /* util.h */,
+				969FB48F25CA87AE00828217 /* visibility.h */,
+			);
+			path = event2;
+			sourceTree = "<group>";
+		};
+		969FB49325CA87AE00828217 /* openssl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = openssl;
+			sourceTree = "<group>";
+		};
+		969FB49425CA87B700828217 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				969FB49525CA87B700828217 /* libcrypto.a */,
+				969FB49625CA87B700828217 /* libevent.a */,
+				969FB49725CA87B700828217 /* libevent_core.a */,
+				969FB49825CA87B700828217 /* libevent_extra.a */,
+				969FB49925CA87B700828217 /* libevent_openssl.a */,
+				969FB49A25CA87B700828217 /* libevent_pthreads.a */,
+				969FB49B25CA87B700828217 /* libssl.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		969FB49C25CA893500828217 /* WizBase */ = {
+			isa = PBXGroup;
+			children = (
+				969FB4B425CA8ABF00828217 /* AvartarDB_Action.cpp */,
+				969FB4BE25CA8AC000828217 /* AvartarDB_Action.h */,
+				969FB4C825CA8AC200828217 /* AvartarDB_Base.cpp */,
+				969FB4B925CA8ABF00828217 /* AvartarDB_Base.h */,
+				969FB4C525CA8AC100828217 /* AvartarDBManager.cpp */,
+				969FB4AC25CA8ABE00828217 /* AvartarDBManager.h */,
+				969FB4A425CA8ABE00828217 /* AvartarSortObj.cpp */,
+				969FB4C325CA8AC100828217 /* AvartarSortObj.h */,
+				969FB4D625CA8AC300828217 /* base64.cpp */,
+				969FB4CC25CA8AC200828217 /* base64.h */,
+				969FB4BA25CA8ABF00828217 /* ByteBase.cpp */,
+				969FB4BD25CA8AC000828217 /* ByteBase.h */,
+				969FB4C425CA8AC100828217 /* CDebug.cpp */,
+				969FB4C625CA8AC100828217 /* CDebug.h */,
+				969FB4BB25CA8AC000828217 /* ConnQueue.cpp */,
+				969FB4B525CA8ABF00828217 /* ConnQueue.h */,
+				969FB4C125CA8AC100828217 /* ConnSSL.cpp */,
+				969FB49D25CA8ABD00828217 /* ConnSSL.h */,
+				969FB4A125CA8ABD00828217 /* cws.cpp */,
+				969FB4B225CA8ABE00828217 /* cws.h */,
+				969FB4A725CA8ABE00828217 /* FileQueue.cpp */,
+				969FB4D425CA8AC300828217 /* FileQueue.h */,
+				969FB4CD25CA8AC200828217 /* HTTP_Config.cpp */,
+				969FB4A625CA8ABE00828217 /* HTTP_Config.h */,
+				969FB49E25CA8ABD00828217 /* Linux_Win.cpp */,
+				969FB4D125CA8AC300828217 /* Linux_Win.h */,
+				969FB4C725CA8AC200828217 /* ObjectProcess.cpp */,
+				969FB4B825CA8ABF00828217 /* ObjectProcess.h */,
+				969FB4AE25CA8ABE00828217 /* ParseBase.cpp */,
+				969FB4C925CA8AC200828217 /* ParseBase.h */,
+				969FB4CF25CA8AC300828217 /* ParseExternal.cpp */,
+				969FB4AF25CA8ABE00828217 /* ParseExternal.h */,
+				969FB4B025CA8ABE00828217 /* ParseObj.cpp */,
+				969FB4AA25CA8ABE00828217 /* ParseObj.h */,
+				969FB4B725CA8ABF00828217 /* ParseProcess.cpp */,
+				969FB4A225CA8ABD00828217 /* ParseProcess.h */,
+				969FB4CB25CA8AC200828217 /* ParseXml.cold */,
+				969FB4CE25CA8AC200828217 /* ParseXml.cpp */,
+				969FB4BF25CA8AC000828217 /* ParseXml.h */,
+				969FB49F25CA8ABD00828217 /* pugiconfig.hpp */,
+				969FB4CA25CA8AC200828217 /* pugixml.cpp */,
+				969FB4B625CA8ABF00828217 /* pugixml.hpp */,
+				969FB4B125CA8ABE00828217 /* sha1.cpp */,
+				969FB4A925CA8ABE00828217 /* sha1.h */,
+				969FB4C025CA8AC000828217 /* stdafx.cpp */,
+				969FB4D325CA8AC300828217 /* stdafx.h */,
+				969FB4A325CA8ABD00828217 /* STRING_Helper.cpp */,
+				969FB4A025CA8ABD00828217 /* STRING_Helper.h */,
+				969FB4D025CA8AC300828217 /* ThirdBase.cpp */,
+				969FB4A825CA8ABE00828217 /* ThirdBase.h */,
+				969FB4B325CA8ABF00828217 /* ThirdQQ.cpp */,
+				969FB4D225CA8AC300828217 /* ThirdQQ.h */,
+				969FB4C225CA8AC100828217 /* WizBase.cpp */,
+				969FB4A525CA8ABE00828217 /* WizBase.h */,
+				969FB4BC25CA8AC000828217 /* XML_Mini.cpp */,
+				969FB4AD25CA8ABE00828217 /* XML_Mini.h */,
+				969FB4AB25CA8ABE00828217 /* XmlBinProcess.cpp */,
+				969FB4D525CA8AC300828217 /* XmlBinProcess.h */,
+			);
+			path = WizBase;
+			sourceTree = "<group>";
+		};
+		969FB4F425CA8BFB00828217 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				969FB4FB25CA8C1300828217 /* libiconv.2.4.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		969FB46625CA83CA00828217 /* ht_xlcpp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 969FB46E25CA83CA00828217 /* Build configuration list for PBXNativeTarget "ht_xlcpp" */;
+			buildPhases = (
+				969FB46325CA83CA00828217 /* Sources */,
+				969FB46425CA83CA00828217 /* Frameworks */,
+				969FB46525CA83CA00828217 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ht_xlcpp;
+			productName = WizGW3;
+			productReference = 969FB46725CA83CA00828217 /* ht_xlcpp */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		969FB45F25CA83CA00828217 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = liyang;
+				TargetAttributes = {
+					969FB46625CA83CA00828217 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 969FB46225CA83CA00828217 /* Build configuration list for PBXProject "ht_xlcpp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 969FB45E25CA83CA00828217;
+			productRefGroup = 969FB46825CA83CA00828217 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				969FB46625CA83CA00828217 /* ht_xlcpp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		969FB46325CA83CA00828217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969FB4E325CA8AC400828217 /* ByteBase.cpp in Sources */,
+				969FB4D925CA8AC400828217 /* STRING_Helper.cpp in Sources */,
+				969FB4E125CA8AC400828217 /* AvartarDB_Action.cpp in Sources */,
+				969FB4D825CA8AC400828217 /* cws.cpp in Sources */,
+				969FB46B25CA83CA00828217 /* main.cpp in Sources */,
+				969FB4DB25CA8AC400828217 /* FileQueue.cpp in Sources */,
+				969FB4E025CA8AC400828217 /* ThirdQQ.cpp in Sources */,
+				969FB4DD25CA8AC400828217 /* ParseBase.cpp in Sources */,
+				969FB4E625CA8AC400828217 /* stdafx.cpp in Sources */,
+				969FB4EE25CA8AC400828217 /* HTTP_Config.cpp in Sources */,
+				969FB4E425CA8AC400828217 /* ConnQueue.cpp in Sources */,
+				969FB4E725CA8AC400828217 /* ConnSSL.cpp in Sources */,
+				969FB4DC25CA8AC400828217 /* XmlBinProcess.cpp in Sources */,
+				969FB4EA25CA8AC400828217 /* AvartarDBManager.cpp in Sources */,
+				969FB4E525CA8AC400828217 /* XML_Mini.cpp in Sources */,
+				969FB4DE25CA8AC400828217 /* ParseObj.cpp in Sources */,
+				969FB4F125CA8AC400828217 /* ThirdBase.cpp in Sources */,
+				969FB4EC25CA8AC400828217 /* AvartarDB_Base.cpp in Sources */,
+				969FB4F025CA8AC400828217 /* ParseExternal.cpp in Sources */,
+				969FB4E225CA8AC400828217 /* ParseProcess.cpp in Sources */,
+				969FB4D725CA8AC400828217 /* Linux_Win.cpp in Sources */,
+				969FB4ED25CA8AC400828217 /* pugixml.cpp in Sources */,
+				969FB4E825CA8AC400828217 /* WizBase.cpp in Sources */,
+				969FB4EB25CA8AC400828217 /* ObjectProcess.cpp in Sources */,
+				969FB4F225CA8AC400828217 /* base64.cpp in Sources */,
+				969FB4E925CA8AC400828217 /* CDebug.cpp in Sources */,
+				969FB4DF25CA8AC400828217 /* sha1.cpp in Sources */,
+				969FB4DA25CA8AC400828217 /* AvartarSortObj.cpp in Sources */,
+				969FB4EF25CA8AC400828217 /* ParseXml.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		969FB46C25CA83CA00828217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/include",
+					"$(SRCROOT)/src",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		969FB46D25CA83CA00828217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/include",
+					"$(SRCROOT)/src",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		969FB46F25CA83CA00828217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/src",
+					"$(SRCROOT)/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/lib",
+					"$(PROJECT_DIR)/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		969FB47025CA83CA00828217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/src",
+					"$(SRCROOT)/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/lib",
+					"$(PROJECT_DIR)/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		969FB46225CA83CA00828217 /* Build configuration list for PBXProject "ht_xlcpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				969FB46C25CA83CA00828217 /* Debug */,
+				969FB46D25CA83CA00828217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		969FB46E25CA83CA00828217 /* Build configuration list for PBXNativeTarget "ht_xlcpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				969FB46F25CA83CA00828217 /* Debug */,
+				969FB47025CA83CA00828217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 969FB45F25CA83CA00828217 /* Project object */;
+}

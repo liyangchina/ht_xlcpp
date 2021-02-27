@@ -1,0 +1,304 @@
+﻿#include "stdafx.h"
+#include <string>
+#include "string.h"
+#include <fstream>
+#include <sstream>
+ #include <pugixml.hpp>
+#include "ParseXml.h"
+#include "XML_Mini.h"
+#include "STRING_Helper.h"
+#include "Linux_Win.h"
+#ifdef NO_CCODE
+#else
+	#include "CChineseCode.h"
+#endif
+
+using namespace std;
+using namespace pugi;
+
+//构造函数初始化point指针为开始
+Http_ParseXML::Http_ParseXML(){ 
+	//this->ObjXml = new ParseXml_Doc;
+}
+
+//返回xml节点的xml字串，包括自身。
+string Http_ParseXML::XmlToStr(ParseXml_Node node)
+{
+    ParseXml_xml_string_writer writer;
+    node.print(writer);
+
+    return writer.result;
+}
+
+//返回xml节点集字串。
+string Http_ParseXML::XmlToStr(ParseXml_NodeSet nodes,const char *split)
+{
+	string s;
+    for (ParseXml_NodeSet::const_iterator it = nodes.begin(); it != nodes.end(); ++it)
+	{
+		pugi::xpath_node node = *it;
+		s+=(Http_ParseXML::XmlToStr(node.node())+split);
+	}
+	if (s.size()!=0)
+		return s.substr(0,s.size()-strlen(split));
+	else
+		return s;
+}
+
+//返回xml节点集字串。
+string Http_ParseXML::XmlValueToStr(ParseXml_NodeSet nodes,const char *split)
+{
+	string s;
+    for (ParseXml_NodeSet::const_iterator it = nodes.begin(); it != nodes.end(); ++it)
+	{
+		pugi::xpath_node node = *it;
+		s+=string(node.node().text().get())+split;
+	}
+	if (s.size()!=0)
+		return s.substr(0,s.size()-strlen(split));
+	else
+		return s;
+}
+//构造函数初始化point指针为开始
+int Http_ParseXML::LoadFile(const char * file_name,unsigned int parse_way){
+
+	this->ParseWay=parse_way;
+	this->FileName=file_name;
+	//打开文件
+	std::ifstream stream(file_name);  
+	//要求必须是utf-8文件否则，返回错误。
+	if(!stream){
+		this->ErrorStr = (string )"Loading File "+file_name+" Fail ! ";
+		return Http_ParseXML::LOAD_XML_ERROR;
+	}
+	string s,file_temp,file_str;     
+	while (getline(stream,s)){
+		file_str+=s;
+	}
+
+	//要求必须是utf-8文件否则，返回错误。
+	if(file_str.find("encoding=\"utf-8\"")==file_str.npos && file_str.find("encoding=\"UTF-8\"")==file_str.npos ){
+		this->ErrorStr = "The xml file must be encoding=utf-8 !";
+		return Http_ParseXML::LOAD_XML_ERROR;
+	}
+
+	//如配置了LoacalEncode=UTF8ToGb2312 ,则对于utf-8中的汉字，需要转化后使用。
+	string local_encode;
+#ifdef NO_CCODE
+	file_temp = file_str;
+#else
+	if (this->ReadXML_Field(file_str,"LocalEncode",local_encode)){
+		if (local_encode=="UTF8ToGB2312"){
+			CChineseCode::UTF_8ToGB2312(file_temp,file_str.c_str());
+			//file_temp = STRING_Helper::UTF_8ToGB2312(file_str.c_str());
+		}else{
+			this->ErrorStr = "The xml file <LocalEncode> method dosn't support!";
+			return Http_ParseXML::LOAD_XML_ERROR;
+		}
+	}else
+			file_temp = file_str;
+#endif
+	this->Load(file_temp.c_str());
+	return  Http_ParseXML::LOAD_XML_SUCCESS;
+}
+
+int Http_ParseXML::SaveFile(){
+
+	if (this->ObjXml.save_file(this->FileName.c_str()))
+		return  Http_ParseXML::SAVE_XML_SUCCESS;
+	else
+		return  Http_ParseXML::SAVE_XML_ERROR;
+}
+
+int Http_ParseXML::SaveFile(string encode_str){
+	xml_encoding encode_tmp;
+
+	if (encode_str=="UTF-8" || encode_str=="utf-8"){
+		pugi::xml_node decl = this->ObjXml.prepend_child(pugi::node_declaration);
+		decl.append_attribute("version") = "1.0";
+		decl.append_attribute("encoding") = "UTF-8";
+		encode_tmp=encoding_utf8;
+	}else
+		return  Http_ParseXML::SAVE_XML_ERROR;
+
+	if (this->ObjXml.save_file(this->FileName.c_str(),"\t",format_default,encode_tmp))
+		return  Http_ParseXML::SAVE_XML_SUCCESS;
+	else
+		return  Http_ParseXML::SAVE_XML_ERROR;
+}
+
+int Http_ParseXML::Load(const char * xml_str){
+
+	//初始化 XML对象
+	this->ParseResult = this->ObjXml.load(xml_str,this->ParseWay);
+
+	if (this->ParseResult)
+		return Http_ParseXML::LOAD_XML_SUCCESS;
+	else{
+		this->ErrorStr = this->ParseResult.description();
+		return Http_ParseXML::LOAD_XML_ERROR;
+	}
+
+}
+
+ParseXml_Node Http_ParseXML::Child(ParseXml_Node now_node,const char *node_name){
+	return now_node.child(node_name);
+}
+
+ParseXml_Node Http_ParseXML::FirstChild(ParseXml_Node parent_node){
+	return parent_node.first_child();
+}
+
+ParseXml_Node Http_ParseXML::Parent(ParseXml_Node node) {
+	return node.parent();
+}
+
+ParseXml_Node Http_ParseXML::NextChild(ParseXml_Node parent_node){
+	return parent_node.next_sibling();
+}
+
+const char*Http_ParseXML::NodeName(ParseXml_Node this_node){
+	return this_node.name();
+}
+
+const char*Http_ParseXML::NodeValue(ParseXml_Node this_node){
+	//cout << this_node.text().get() << endl;
+	return this_node.text().get();
+}
+
+const char*Http_ParseXML::NodeAttr(ParseXml_Node this_node,const char*attr_name){
+	return this_node.attribute(attr_name).value();
+}
+
+string& Http_ParseXML::GetNodeLine(ParseXml_Node this_node,string &line_str){
+	line_str = (string)"<"+this->NodeName(this_node);
+	for (pugi::xml_attribute_iterator ait = this_node.attributes_begin(); ait != this_node.attributes_end(); ++ait)
+	{
+		line_str +=(string)" "+ait->name()+"="+ait->value();
+	};
+	line_str += ">";
+	return line_str;
+}
+
+
+int Http_ParseXML::SetNodeValue(ParseXml_Node this_node, const char *value){
+	if (this_node.first_child().set_value(value))
+		return Http_ParseXML::XML_SUCCESS;
+	else{
+		if (this_node.text().set(value))
+			return Http_ParseXML::XML_SUCCESS;
+		else
+			return Http_ParseXML::XML_ERROR;
+	}
+}
+
+
+//功能：取得jpath所指的对象的值。
+//返回：
+//成功-返回字符串指针；失败返回NULL;
+//注：要把所指字符串一次性拿走，否则下次更改就不知道定位在哪里了。
+const char *Http_ParseXML::GetNodeValue(const char *jpath){
+	ParseXml_Node node;
+	char *attr=(char *)strrchr(jpath,'@');
+	char *a1=(char *)strrchr(jpath,'/');
+	char *a2=(char *)strrchr(jpath,'\\');
+
+	if (a1<attr && a2<attr && (a1==(attr-1) || a2==(attr-1))){
+		//支持类似***/***/@***的取值模式。
+		string jpath_str=string(jpath).substr(0,attr-jpath-1);
+
+		//属性类xpath节点读取属性值。
+		if((node=this->GetNodeByXpath(jpath_str.c_str()))){//取得节点
+			return this->NodeAttr(node,attr+1);//取得属性值。
+		}else{
+			return NULL;
+		}
+	}else{
+		//针对普通xpath节点****/****/****模式。
+		if((node=this->GetNodeByXpath(jpath))){//取得节点
+			return this->NodeValue(node);//取得节点值。
+		}else{
+			return NULL;
+		}
+	}
+	
+}
+
+int Http_ParseXML::SetValue(const char *jpath,const char*value){
+	ParseXml_Node node;
+	if((node=this->GetNodeByXpath(jpath))){//取得节点
+		return this->SetNodeValue(node,value);//uevi jxdm vi
+	}else{//如果无节点,
+		string spath=jpath;
+		string spath1=spath.substr(0,spath.find_last_of("/"));
+		string spath2=spath.substr(spath.find_last_of("/")+1);
+
+		if ((node=this->GetNodeByXpath(spath1.c_str()))){//如果有父节点，则增加一个节点
+			ParseXml_Node node2=this->AddNode(node,spath2.c_str());
+			//if (node.text().set(value))
+			//	return Http_ParseXML::XML_SUCCESS;
+			//else
+			//	return Http_ParseXML::XML_ERROR;
+			return this->SetNodeValue(node2,value);
+		}else{
+			return Http_ParseXML::XML_ERROR;
+		}
+	}
+}
+
+ParseXml_Node Http_ParseXML::AddNode(ParseXml_Node node, const char *node_name){
+	return this->AddNode(node,node_name,false);
+}
+
+ParseXml_Node Http_ParseXML::AddNode(ParseXml_Node node, const char *node_name,bool is_clear){
+	if (is_clear)
+		node.remove_child(node_name);
+	pugi::xml_node descr = node.append_child(node_name);
+	return descr;
+}
+
+ParseXml_Node Http_ParseXML::GetNodeByXpath(const char *jpath){
+	pugi::xml_node tool;
+	xpath_node xml_node;
+	try	{
+		xml_node = this->ObjXml.select_single_node(jpath);
+		
+	}catch (const pugi::xpath_exception& e){
+		this->ErrorStr=e.what();
+		return tool;
+	}				
+	if (xml_node){
+		return xml_node.node();
+	}else{
+		this->ErrorStr=(string)"GetNodeByXpath('"+jpath+"'):Can't find this node!";
+		return tool;
+	}
+}
+
+ParseXml_NodeSet Http_ParseXML::GetNodeSetByXpath(const char *jpath){
+	ParseXml_NodeSet tools;
+	xpath_node_set xml_nodes;
+	try	{
+		xml_nodes = this->ObjXml.select_nodes(jpath);
+		
+	}catch (const pugi::xpath_exception& e){
+		this->ErrorStr=e.what();
+		return tools;
+	}				
+	return xml_nodes;
+}
+
+//功能：设置jpath所指的对象的值。
+//返回：字符串指针。
+/*const char * Http_ParseXML::_ParseObjValue(ParseObj_T::iterator point){
+	
+	return "13"
+}*/
+
+//功能：point定位到指定对象“****.****”,或者第一个“****.****.****”的子节点;
+//		-如果没有找到则指针定位在::end
+//返回：
+//		找到指定对象-SUCCESS; 找到指定对象子节点：POINT_SON；不存在指定对象和子节点-POINT_NULL;
+int Http_ParseXML::Find(const char *jpath){
+	return 1;
+}
